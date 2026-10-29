@@ -45,8 +45,18 @@ Nie chciałbym, żeby Google zapisywał w wynikach każdą możliwą wersję lis
 
 ## Lighthouse
 
+<details>
+  <summary>Click to view images</summary>
+
+### PC lighthouse
+
 ![alt text](/public/lighthouse/pc.png)
+
+### Mobile lighthouse
+
 ![alt text](/public/lighthouse/mobile.png)
+
+</details>
 
 ## Zakres i dalsze kroki
 
