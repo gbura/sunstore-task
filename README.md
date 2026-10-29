@@ -2,6 +2,9 @@
 
 Listing B2B zasilany plikiem `server/assets/products.csv`. Aplikacja używa Nuxt 4, Vue 3 i TypeScript w trybie strict.
 
+## Preview
+Kliknij żeby zobaczyć preview projektu [sunstore](sunstore-task-dg.netlify.app)
+
 ## Uruchomienie
 
 ```bash
