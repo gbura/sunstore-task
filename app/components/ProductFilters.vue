@@ -98,7 +98,7 @@ onBeforeUnmount(() => clearTimeout(debounceTimeout))
       <h2 class="text-base font-semibold tracking-tight text-slate-900">Filters</h2>
       <button
         type="button"
-        class="text-xs font-semibold text-emerald-700 transition hover:text-emerald-950"
+        class="text-xs font-semibold text-emerald-700 transition hover:text-emerald-950 cursor-pointer"
         @click="resetFilters">
         Clear
       </button>
@@ -129,7 +129,7 @@ onBeforeUnmount(() => clearTimeout(debounceTimeout))
       <select
         name="category"
         v-model="filters.category"
-        class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm font-normal text-slate-800 outline-none transition focus:border-emerald-700 focus:bg-white focus:ring-4 focus:ring-emerald-700/10">
+        class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm font-normal text-slate-800 outline-none transition focus:border-emerald-700 focus:bg-white focus:ring-4 focus:ring-emerald-700/10 cursor-pointer">
         <option value="">All categories</option>
         <option v-for="category in categories" :key="category" :value="category">
           {{ formatCategoryLabel(category) }}
@@ -142,7 +142,7 @@ onBeforeUnmount(() => clearTimeout(debounceTimeout))
       <select
         name="manufacturer"
         v-model="filters.manufacturer"
-        class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm font-normal text-slate-800 outline-none transition focus:border-emerald-700 focus:bg-white focus:ring-4 focus:ring-emerald-700/10">
+        class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm font-normal text-slate-800 outline-none transition focus:border-emerald-700 focus:bg-white focus:ring-4 focus:ring-emerald-700/10 cursor-pointer">
         <option value="">All manufacturers</option>
         <option v-for="manufacturer in manufacturers" :key="manufacturer" :value="manufacturer">
           {{ manufacturer }}
@@ -183,7 +183,7 @@ onBeforeUnmount(() => clearTimeout(debounceTimeout))
       <select
         name="sort"
         v-model="filters.sort"
-        class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm font-normal text-slate-800 outline-none transition focus:border-emerald-700 focus:bg-white focus:ring-4 focus:ring-emerald-700/10">
+        class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm font-normal text-slate-800 outline-none transition focus:border-emerald-700 focus:bg-white focus:ring-4 focus:ring-emerald-700/10 cursor-pointer">
         <option value="name">Name A–Z</option>
         <option value="price-asc">Price: low to high</option>
         <option value="price-desc">Price: high to low</option>
