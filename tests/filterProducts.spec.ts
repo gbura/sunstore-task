@@ -61,6 +61,35 @@ describe('filterProducts', () => {
     expect(filterProducts(products, { ...defaultFilters, q: 'sunpower' })).toHaveLength(2)
   })
 
+  it('should sort by price in ascending order [P]', () => {
+    expect(filterProducts(products, { ...defaultFilters, sort: 'price-asc' }).map(product => product.name)).toEqual([
+      'Connector',
+      'Panel 450',
+      'Battery 10',
+    ])
+  })
+
+  it('should sort by price in descending order [P]', () => {
+    expect(filterProducts(products, { ...defaultFilters, sort: 'price-desc' }).map(product => product.name)).toEqual([
+      'Battery 10',
+      'Panel 450',
+      'Connector',
+    ])
+  })
+
+  it('should sort equal-priced products by name for both price orders [P]', () => {
+    const equalPricedProducts = products.map(product => ({ ...product, price: 100 }))
+    const expectedNames = ['Battery 10', 'Connector', 'Panel 450']
+
+    expect(
+      filterProducts(equalPricedProducts, { ...defaultFilters, sort: 'price-asc' }).map(product => product.name),
+    ).toEqual(expectedNames)
+
+    expect(
+      filterProducts(equalPricedProducts, { ...defaultFilters, sort: 'price-desc' }).map(product => product.name),
+    ).toEqual(expectedNames)
+  })
+
   it('should sort by power and keeps products without a value after products with one [P]', () => {
     expect(filterProducts(products, { ...defaultFilters, sort: 'power-desc' }).map(product => product.name)).toEqual([
       'Panel 450',
