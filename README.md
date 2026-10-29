@@ -3,6 +3,7 @@
 Listing B2B zasilany plikiem `server/assets/products.csv`. Aplikacja używa Nuxt 4, Vue 3 i TypeScript w trybie strict.
 
 ## Preview
+
 Kliknij żeby zobaczyć preview projektu [sunstore](sunstore-task-dg.netlify.app)
 
 ## Uruchomienie
@@ -44,7 +45,8 @@ Nie chciałbym, żeby Google zapisywał w wynikach każdą możliwą wersję lis
 
 ## Lighthouse
 
-Lighthouse 13.6, lokalny build produkcyjny (preset mobile): **Performance 100, Accessibility 100, Best Practices 100, SEO 100**. FCP 1,2 s, LCP 1,2 s, TBT 0 ms, CLS 0.
+![alt text](/public/lighthouse/pc.png)
+![alt text](/public/lighthouse/mobile.png)
 
 ## Zakres i dalsze kroki
 
