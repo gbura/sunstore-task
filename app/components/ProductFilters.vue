@@ -22,6 +22,14 @@ const filters = reactive({
 
 let debounceTimeout: ReturnType<typeof setTimeout> | undefined
 
+function updatePriceFilter(key: 'minPrice' | 'maxPrice', event: Event) {
+  const input = event.target
+
+  if (input instanceof HTMLInputElement) {
+    filters[key] = input.value
+  }
+}
+
 function applyFilters() {
   const query = { ...route.query }
   let hasChanges = false
@@ -152,7 +160,8 @@ onBeforeUnmount(() => clearTimeout(debounceTimeout))
           type="number"
           min="0"
           step="0.01"
-          v-model="filters.minPrice"
+          :value="filters.minPrice"
+          @input="updatePriceFilter('minPrice', $event)"
           placeholder="Min"
           aria-label="Minimum price"
           class="min-w-0 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm font-normal text-slate-800 outline-none transition placeholder:text-slate-500 focus:border-emerald-700 focus:bg-white focus:ring-4 focus:ring-emerald-700/10" />
@@ -161,7 +170,8 @@ onBeforeUnmount(() => clearTimeout(debounceTimeout))
           type="number"
           min="0"
           step="0.01"
-          v-model="filters.maxPrice"
+          :value="filters.maxPrice"
+          @input="updatePriceFilter('maxPrice', $event)"
           placeholder="Max"
           aria-label="Maximum price"
           class="min-w-0 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm font-normal text-slate-800 outline-none transition placeholder:text-slate-500 focus:border-emerald-700 focus:bg-white focus:ring-4 focus:ring-emerald-700/10" />

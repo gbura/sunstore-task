@@ -47,6 +47,8 @@ Lighthouse 13.6, lokalny build produkcyjny (preset mobile): **Performance 100, A
 
 Celowo nie dodawałem stron szczegółów produktów, logowania, panelu edycji ani bazy danych - nie są potrzebne w tym zadaniu. W kolejnych krokach na pewno dodałbym brakujące strony.
 
+Dodałbym walidację oraz lepszą obsługę błędów.
+
 Dodatkowo dodałbym animacje na stronie, aby sama strona zapadła w pamięci użytkownikowi i aby dodać trochę więcej interakcji z użytkownikiem.
 
 W przyszłości warto by było również dokładniej przyjrzeć się wyciąganiu wartości z nazwy oraz opisu, ponieważ obecny regex sprawdza tylko kombinację liczba-jednostka.
